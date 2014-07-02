@@ -1,0 +1,10 @@
+$(document).ready(function() {
+  $("#new_message").on("ajax:success", function(e, data, status, xhr) {
+    res = xhr.responseText;
+    text = JSON.parse( res )['text'];
+    $(".messages").append(text);
+    $('#message_text').val('');
+  }).on("ajax:error", function(e, xhr, status, error) {
+    $("#new_message").append("<p>ERROR</p>");
+  });
+});
