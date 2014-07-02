@@ -1,12 +1,7 @@
 <h1>Listing messages</h1>
 
 <div class='messages'>
-    <% @messages.each do |message| %>
-      <div class='message'>
-	<span><%= message.text %></span>
-	<span><%= time_ago_in_words(message.created_at ) %> ago</span>
-      </div>
-    <% end %>
+  <%= render @messages %>
 </div>
 
 <%= render 'form' %>

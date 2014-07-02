@@ -1,3 +1,4 @@
-<li>
-  <%= @message.text %>
-</li>
+<div class='message'>
+  <span><%= message.text %></span>
+  <span><%= time_ago_in_words(message.created_at ) %> ago</span>
+</div>
