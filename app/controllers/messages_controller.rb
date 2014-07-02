@@ -26,7 +26,6 @@ class MessagesController < ApplicationController
   # POST /messages.json
   def create
     @message = Message.create!(message_params)
-    render :json => @message
   end
 
   # PATCH/PUT /messages/1
