@@ -1,2 +1,4 @@
-$('.messages').append("<%= escape_javascript render(@message) %>");
+<% broadcast "/messages/new" do %>
+  $('.messages').append("<%= escape_javascript render(@message) %>");
+<% end %>
 $('#message_text').val('');
